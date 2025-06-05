@@ -1,0 +1,159 @@
+.insideimage {
+  display: flex;
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center;     /* Вертикальное выравнивание */
+  height: 100vh;           /* Высота контейнера (можно задать свою) */
+}
+
+.insideimage img {
+  max-width: 75%;         /* Чтобы изображение не выходило за границы */
+  max-height: 75%;
+}
+
+/* Основные стили для текста "О художнике" */
+/* Общие стили для центрирования */
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center; /* Центрируем весь текст */
+}
+
+/* Стили для заголовка "О художнике" */
+h1 {
+    font-size: 3.3em;
+    color: #5a3e36;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/* Стили для абзацев */
+p {
+    font-size: 2.1em;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для блока "О салоне красоты" */
+.infomain {
+    margin-top: 50px;
+    border-top: 1px solid #e0d6c2;
+    padding-top: 30px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infomain h2 {
+    font-size: 2.8em;
+    color: #5a3e36;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.infomain p {
+    font-style: italic;
+    color: #666;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  overflow-x: auto;
+  margin: 0; /* Убираем все внешние отступы */
+  width: auto; /* Сбрасываем фиксированную ширину */
+  max-width: none; /* Отменяем ограничение максимальной ширины */
+}
+
+.info-section {
+  flex: 0 0 auto;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-right: 30px;
+}
+
+/* Убираем отступ у последнего блока */
+.info-section:last-child {
+  margin-right: 0;
+}
+
+
+.info-section2 {
+  flex: 0 0 auto;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-right: 30px;
+  transition: all 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* Анимация при наведении */
+.info-section2:hover {
+  transform: translateY(-5px); /* Поднимаем блок на 5px вверх */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Усиливаем тень */
+  background-color: #f9f9f9; /* Легкое изменение фона */
+}
+
+
+.info-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+}
+
+.info-content2 {
+  font-size: 8px;
+  color: #555;
+  padding-left: 0px;
+  word-break: break-word;
+}
+
+
+.info-content {
+  font-size: 10px;
+  color: #555;
+  padding-left: 0px;
+  border-left: 2px solid #d4a76a;
+  border-right: 2px solid #d4a76a;
+  word-break: break-word;
+}
+
+.info-content p {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.info{
+    color: #666;
+}
+
+.infomain a {
+  text-decoration: none;
+  color: #5a3e36;
+  transition: all 0.3s ease; /* Плавность анимации */
+  display: inline-block; /* Для transform */
+}
+
+.infomain a:hover {
+  color: #d4a76a; /* Цвет при наведении */
+  transform: translateY(-2px); /* Лёгкий подъём */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень текста */
+}
