@@ -157,3 +157,64 @@ p {
   transform: translateY(-2px); /* Лёгкий подъём */
   text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Тень текста */
 }
+
+@media only screen and (max-width: 896px) {
+  .insideimage {
+    height: 50vh; /* Уменьшаем высоту контейнера для мобильных */
+  }
+  
+  .insideimage img {
+    max-width: 90%; /* Увеличиваем изображение для лучшей видимости */
+    max-height: 90%;
+  }
+  
+  h1 {
+    font-size: 2.2em; /* Уменьшаем размер заголовка */
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.4em; /* Уменьшаем размер текста */
+    padding: 0 15px; /* Добавляем отступы по бокам */
+  }
+  
+  .infomain {
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  
+  .infomain h2 {
+    font-size: 1.8em;
+  }
+  
+  .info-container {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: hidden;
+  }
+  
+  .info-section, 
+  .info-section2 {
+    max-width: 90%; /* Занимают почти всю ширину экрана */
+    margin-right: 0;
+    padding: 15px;
+  }
+  
+  .info-title {
+    font-size: 20px;
+  }
+  
+  .info-content, 
+  .info-content2 {
+    font-size: 14px; /* Увеличиваем размер шрифта для читабельности */
+    border-left: none;
+    border-right: none;
+  }
+  
+  /* Оптимизация отступов для мобильных */
+  body {
+    padding: 10px;
+  }
+}
