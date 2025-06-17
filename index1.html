@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="фотофорум, фотография, фотоаппараты, canon, nikon, sony, объективы, фотокурсы, курсовая работа">
-    <meta name="author" content="ИС-24б">
-    <meta name="description" content="Форум о фотографии и фотоаппаратах. Обсуждение техники, объективов, аксессуаров и техники съемки. Сайт создан в рамках курсовой работы.">
+    <meta name="keywords" content="Красота, салон красоты, салон красоты Смоленск">
+    <meta name="description" content="Салон красоты, здесь вы можете найти любые услуги для вашего преображения!">
     <title>Салон красоты "Мари"</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=cc097850-0e20-4984-aa56-049bcc17c175&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-    <div class="infomain">
+    <nav>
+        <div class="nav-container">
+            <a href="#about" class="nav-link">О салоне</a>
+            <a href="#principles" class="nav-link">Принципы</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#order" class="nav-link">Запись</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+        </div>
+    </nav>
+     <div class="infomain" id="about">
         <h2>Салон красоты "Мари"</h2>
         <p>Добро пожаловать!</p>
     </div>
+    
     <div class="insideimage">
         <img src="images/imageinside.jpg" alt="imageinside">
     </div>
+    
     <div class="infomain">
         <h2>О салоне красоты</h2>
         <p>Меня зовут Мария Байдукова и это мой салон красоты. Рада приветствовать вас, жаждущие красоты, клиенты! Здесь вы можете найти абсолютно любые услуги на ваш вкус. Моя задача - это воплотить любые фантазии в деле красоты. Буду очень рада, если вас что-нибудь заинтересует!</p>
     </div>
 
-    <div class="infomain">
+    <div class="infomain" id="principles">
         <h2>Мои принципы</h2>
     </div>
     <div class="info-container">
@@ -50,8 +62,8 @@
         </div>
     </div>
 
-    <div class="infomain">
-        <h2>Предлаемые услуги. Больше в нашем Telegram (информация в контактах)</h2>
+    <div class="infomain" id="services">
+        <h2>Предлагаемые услуги. Больше в нашем Telegram (информация в контактах)</h2>
     </div>
 
     <div class="info-container">
@@ -84,14 +96,95 @@
         </div>
     </div>
 
-    <div class="infomain">
-        <h2>Контакты</h2>
-        <p class="info">Я всегда открыта для новых клиентов. Если у вас есть вопросы или предложения, то пишите, буду рада сотрудничеству!</p>
+    <div class="order-form" id="order">
+        <h2>Оформить заказ</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email (необязательно):</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Выберите услугу:</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Выберите услугу --</option>
+                    <option value="epilation">Эпиляция</option>
+                    <option value="hair">Уход за волосами</option>
+                    <option value="face">Уход за лицом</option>
+                    <option value="other">Другая услуга</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Желаемая дата:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Желаемое время:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Дополнительные пожелания:</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
     </div>
 
-    <div class="infomain">
-        <h2><a href = "@mmbaii">@mmbaii</a> +79605820149</h2>
+    <div class="infomain" id="reviews">
+    <h2>Отзывы наших клиентов</h2>
+</div>
+
+    <div class="info-container">
+        <div class="info-section">
+            <div class="info-title">Денис Жуков</div>
+            <div class="info-content">
+                <p>"Обращался в салон 'Мари' для эпиляции спины. Очень доволен результатом! Процедура прошла быстро и практически безболезненно. Мария - настоящий профессионал своего дела. Рекомендую!"</p>
+                <p>Оценка: ★★★★★</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-title">Иван Неподшивайло</div>
+            <div class="info-content">
+                <p>"Делал ламинирование волос в салоне. Эффект превзошел все ожидания! Волосы стали гладкими и блестящими, как в рекламе. Персонал вежливый, атмосфера приятная. Обязательно вернусь!"</p>
+                <p>Оценка: ★★★★★</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-title">Дмитрий Мирошниченко</div>
+            <div class="info-content">
+                <p>"Проходил курс уходовых процедур для лица. После каждого сеанса кожа выглядела свежей и отдохнувшей. Мария подобрала индивидуальный уход, который действительно работает. Спасибо за качественный сервис!"</p>
+                <p>Оценка: ★★★★★</p>
+            </div>
+        </div>
     </div>
+
+    <div class="infomain" id="contacts">
+        <h2>Контакты</h2>
+        <p class="info">Я всегда открыта для новых клиентов. Если у вас есть вопросы или предложения, то пишите, буду рада сотрудничеству!</p>
+        <h2><a href="https://t.me/mmbaii">@mmbaii</a> +79605820149</h2>
+    </div>
+
+    <div class="map-container" id="map">
+        <h2>Мы находимся здесь</h2>
+        <h3>г. Смоленск, ул. Гагарина, 22</h3>
+    </div>
+
 
 </body>
 </html>
